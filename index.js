@@ -6,8 +6,8 @@
     // like Node.
     module.exports = factory();
   } else if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define([], factory);
+    // AMD. Register as an named module
+    define('routes', [], factory);
   } else {
     // Browser globals
     root.returnExports = factory();
